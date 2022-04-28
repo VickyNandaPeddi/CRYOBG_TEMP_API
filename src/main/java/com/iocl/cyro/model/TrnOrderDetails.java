@@ -1,6 +1,7 @@
 package com.iocl.cyro.model;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -111,6 +112,18 @@ public class TrnOrderDetails {
 
 	@Column(name = "STATUS")
 	private String status;
+	
+	@Column(name = "TRN_UTR_NUM")
+	private String trn_utr_num;
+	
+	@Column(name = "TRN_DATE")
+	private Timestamp trn_date;
+	
+	@Column(name = "TRN_AMOUNT")
+	private double trn_amount;
+	
+	@Column(name = "TRN_PO_DET")
+	private String trn_po_det;
 
 	public int getReqNo() {
 		return reqNo;
@@ -366,6 +379,38 @@ public class TrnOrderDetails {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getTrn_utr_num() {
+		return trn_utr_num;
+	}
+
+	public void setTrn_utr_num(String trn_utr_num) {
+		this.trn_utr_num = trn_utr_num;
+	}
+
+	public Timestamp getTrn_date() {
+		return trn_date;
+	}
+
+	public void setTrn_date(Timestamp trn_date) {
+		this.trn_date = trn_date;
+	}
+
+	public double getTrn_amount() {
+		return trn_amount;
+	}
+
+	public void setTrn_amount(double trn_amount) {
+		this.trn_amount = trn_amount;
+	}
+
+	public String getTrn_po_det() {
+		return trn_po_det;
+	}
+
+	public void setTrn_po_det(String trn_po_det) {
+		this.trn_po_det = trn_po_det;
 	}
 
 	@Override
